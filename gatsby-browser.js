@@ -6,6 +6,9 @@
 
 // You can delete this file if you're not using it
 
+require("./src/styles/style.css")
+require("./src/styles/custom.css")
+
 exports.onRouteUpdate = ({ location }) => {
   // will trigger the theme's code to re-activate
   if (window.setup) {

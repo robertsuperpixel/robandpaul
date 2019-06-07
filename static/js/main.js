@@ -34,7 +34,7 @@ function setup($) {
 	"use strict";
 	// Vars
 	var body = $('body'),
-		ajaxSite = false,
+		ajaxSite = true,
 		target,
 		preloader = $('.preloader'),
 		preloaderDelay = 1200,

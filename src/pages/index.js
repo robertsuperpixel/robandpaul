@@ -1,46 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
-//import { Link } from "gatsby"
+import Hero from "../components/hero"
+import Service from "../components/services"
 
 const IndexPage = () => (
   <Layout>
-    {/* PAGE HERO */}
-    <div id="page-hero" className="ed-page-hero">
-      <section className="fullscreen-element pt-13 pt-md-10 pb-13 pb-md-10">
-        <div className="overlay">
-          <div className="hero-addon-b bg-light- bg-dark" />
-          <div className="hero-addon-a addon-shadow">
-            <div className="addon-inner">
-              <div className="overlay-inner bg-image-holder bg-cover bg-bottom">
-                <img src="demo/images/image-2.jpg" alt="background" />
-              </div>
-              <div className="overlay-inner bg-primary opacity-90" />
-            </div>
-          </div>
-        </div>
-        <div className="fe-container">
-          <div className="fe-content align-middle">
-            <div className="container text-center parallax-onscroll opacity-onscroll">
-              <h1
-                className="text-white mb-2 translate-text translate-up"
-                data-translate-delay="150"
-              >
-                <span>Marketing & Creative Agency</span>
-              </h1>
-              <p
-                className="lead text-white translate-text translate-up"
-                data-translate-delay="300"
-              >
-                <span>
-                  We launch new brands and create digital products for creative
-                  peoples.
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    <Hero />
 
     {/* PAGE CONTENT */}
     <div id="page-content" className="ed-page-content">
@@ -64,181 +29,48 @@ const IndexPage = () => (
               </p>
             </div>
           </div>
+
           <div className="row">
             <div className="col-md-6 col-sm-6">
-              <div className="feature-block mb-5">
-                <div
-                  className="feature-block-icon mb-4 text-primary animated"
-                  data-animation="fadeInUp"
-                >
-                  <div>
-                    <i className="ion-ios-speedometer-outline" />
-                  </div>
-                </div>
-                <h3 className="h4 mb-2 translate-text translate-up">
-                  <span>Launch Quickly</span>
-                </h3>
-                <p
-                  className="translate-text translate-up"
-                  data-translate-delay="150"
-                >
-                  <span>
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident.
-                  </span>
-                </p>
-              </div>
+              <Service
+                serviceTitle="Responsive Web Design"
+                serviceDescription="Our core strength, we create beautiful and engaging websites for businesses big and small."
+              />
             </div>
 
             <div className="col-md-6 col-sm-6">
-              <div className="feature-block mb-5">
-                <div
-                  className="feature-block-icon mb-4 text-primary animated"
-                  data-animation="fadeInUp"
-                  data-animation-delay="150"
-                >
-                  <div>
-                    <i className="ion-ios-star-outline" />
-                  </div>
-                </div>
-                <h3
-                  className="h4 mb-2 translate-text translate-up"
-                  data-translate-delay="150"
-                >
-                  <span>Stylish Design</span>
-                </h3>
-                <p
-                  className="translate-text translate-up"
-                  data-translate-delay="300"
-                >
-                  <span>
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident.
-                  </span>
-                </p>
-              </div>
+              <Service
+                serviceTitle="Responsive Web Design"
+                serviceDescription="Our core strength, we create beautiful and engaging websites for businesses big and small."
+              />
             </div>
 
             <div className="col-md-6 col-sm-6">
-              <div className="feature-block mb-5">
-                <div
-                  className="feature-block-icon mb-4 text-primary animated"
-                  data-animation="fadeInUp"
-                  data-animation-delay="300"
-                >
-                  <div>
-                    <i className="ion-ios-book-outline" />
-                  </div>
-                </div>
-                <h3
-                  className="h4 mb-2 translate-text translate-up"
-                  data-translate-delay="300"
-                >
-                  <span>Well Documented</span>
-                </h3>
-                <p
-                  className="translate-text translate-up"
-                  data-translate-delay="450"
-                >
-                  <span>
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident.
-                  </span>
-                </p>
-              </div>
+              <Service
+                serviceTitle="Responsive Web Design"
+                serviceDescription="Our core strength, we create beautiful and engaging websites for businesses big and small."
+              />
             </div>
 
             <div className="col-md-6 col-sm-6">
-              <div className="feature-block mb-5">
-                <div
-                  className="feature-block-icon mb-4 text-primary animated"
-                  data-animation="fadeInUp"
-                  data-animation-delay="450"
-                >
-                  <div>
-                    <i className="ion-ios-photos-outline" />
-                  </div>
-                </div>
-                <h3
-                  className="h4 mb-2 translate-text translate-up"
-                  data-translate-delay="450"
-                >
-                  <span>Parallax Background</span>
-                </h3>
-                <p
-                  className="translate-text translate-up"
-                  data-translate-delay="600"
-                >
-                  <span>
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident.
-                  </span>
-                </p>
-              </div>
+              <Service
+                serviceTitle="Responsive Web Design"
+                serviceDescription="Our core strength, we create beautiful and engaging websites for businesses big and small."
+              />
             </div>
 
             <div className="col-md-6 col-sm-6">
-              <div className="feature-block mb-5 mb-sm-0">
-                <div
-                  className="feature-block-icon mb-4 text-primary animated"
-                  data-animation="fadeInUp"
-                  data-animation-delay="600"
-                >
-                  <div>
-                    <i className="ion-ios-settings" />
-                  </div>
-                </div>
-                <h3
-                  className="h4 mb-2 translate-text translate-up"
-                  data-translate-delay="600"
-                >
-                  <span>Fully Customizable</span>
-                </h3>
-                <p
-                  className="translate-text translate-up"
-                  data-translate-delay="750"
-                >
-                  <span>
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident.
-                  </span>
-                </p>
-              </div>
+              <Service
+                serviceTitle="Responsive Web Design"
+                serviceDescription="Our core strength, we create beautiful and engaging websites for businesses big and small."
+              />
             </div>
 
             <div className="col-md-6 col-sm-6">
-              <div className="feature-block">
-                <div
-                  className="feature-block-icon mb-4 text-primary animated"
-                  data-animation="fadeInUp"
-                  data-animation-delay="750"
-                >
-                  <div>
-                    <i className="ion-ios-chatboxes-outline" />
-                  </div>
-                </div>
-                <h3
-                  className="h4 mb-2 translate-text translate-up"
-                  data-translate-delay="750"
-                >
-                  <span>Friendly Support</span>
-                </h3>
-                <p
-                  className="translate-text translate-up"
-                  data-translate-delay="900"
-                >
-                  <span>
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident.
-                  </span>
-                </p>
-              </div>
+              <Service
+                serviceTitle="Responsive Web Design"
+                serviceDescription="Our core strength, we create beautiful and engaging websites for businesses big and small."
+              />
             </div>
           </div>
         </div>

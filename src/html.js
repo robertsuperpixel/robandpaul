@@ -12,8 +12,6 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="css/style.css" rel="stylesheet" type="text/css" />
-        <link href="css/custom.css" rel="stylesheet" type="text/css" />
         <link
           href="css/font-awesome.min.css"
           rel="stylesheet"
