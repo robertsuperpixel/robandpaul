@@ -22,10 +22,10 @@ const IndexPage = () => (
       {/* Back To Top Button */}
 			<a href="#" className="function-btn backtotop scrollto"><i className="fa fa-angle-up" aria-hidden="true"></i></a>
 
-            {/* PAGE */}
+      {/* PAGE */}
 			<div id="page" className="ed-page">
 
-              {/* PAGE HERO */}
+        {/* PAGE HERO */}
 				<div id="page-hero" className="ed-page-hero">
 
                 <section className="fullscreen-element pt-13 pt-md-10 pb-13 pb-md-10">
