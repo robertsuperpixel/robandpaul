@@ -6,48 +6,38 @@
  */
 
 import React from "react"
+import Footer from "./footer"
 //import PropTypes from "prop-types"
 //import { StaticQuery, graphql } from "gatsby"
-
 import Header from "./header"
 //import "./layout.css"
 
-const Layout = ({ children }) => (
+const Layout = props => (
   <>
-    <Header />
-
-    <main>{children}</main>
-
-    {/* FOOTER */}
-    <footer className="site-footer footer-content-dark bg-light pt-md-9 pb-md-9">
-      <div className="container">
-        <nav className="socials-icons">
-          <ul>
-            <li>
-              <a href="#" className="social-icon">
-                <i className="fa fa-facebook" />
-              </a>
-            </li>
-            <li>
-              <a href="#" className="social-icon">
-                <i className="fa fa-twitter" />
-              </a>
-            </li>
-            <li>
-              <a href="#" className="social-icon">
-                <i className="fa fa-instagram" />
-              </a>
-            </li>
-            <li>
-              <a href="#" className="social-icon">
-                <i className="fa fa-pinterest" />
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <p className="copyright mb-3">© 2017 Trila - All Rights Reserved</p>
+    <div className="preloader preloader-dark">
+      <div className="transition-overlay transition-a bg-dark opacity-85"></div>
+      <div className="transition-overlay transition-b bg-dark"></div>
+      <div className="loader-status">
+        <div className="circle-side"></div>
       </div>
-    </footer>
+    </div>
+    <main className="main-container">
+      <Header
+        lightMenu={props.lightMenu === undefined ? true : props.lightMenu}
+      />
+
+      {/* Back To Top Button */}
+      <a href="#" className="function-btn backtotop scrollto">
+        <i className="fa fa-angle-up" aria-hidden="true"></i>
+      </a>
+
+      {/* PAGE */}
+      <div id="page" className="ed-page">
+        {props.children}
+      </div>
+    </main>
+
+    <Footer></Footer>
   </>
 )
 
