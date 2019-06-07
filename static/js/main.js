@@ -30,12 +30,11 @@ License: https://themeforest.net/licenses/standard
 17. Contact Form
 -------------------------------------------------------------------*/
 
-(function($) {
+function setup($) {
 	"use strict";
-
 	// Vars
 	var body = $('body'),
-		ajaxSite = true,
+		ajaxSite = false,
 		target,
 		preloader = $('.preloader'),
 		preloaderDelay = 1200,
@@ -632,8 +631,13 @@ License: https://themeforest.net/licenses/standard
 
 	// [9. Hero]	
 	function init_ED_Hero() {
-		var hero = $('.ed-page-hero'),
-			heroBottomPadding = parseInt(hero.children('section').css('padding-bottom').slice(0, -2), 10),
+		var hero = $('.ed-page-hero')
+
+		if(hero.children('section').css('padding-bottom') === undefined) {
+			return
+		}
+
+		var heroBottomPadding = parseInt(hero.children('section').css('padding-bottom').slice(0, -2), 10),
 			addonA = $('.ed-page-hero .hero-addon-a'),
 			addonAInner = $('.ed-page-hero .hero-addon-a .addon-inner'),
 			addonB = $('.ed-page-hero .hero-addon-b'),
@@ -1043,4 +1047,7 @@ License: https://themeforest.net/licenses/standard
 		init_ED_Hero();
 	});
 
-})(jQuery);
+};
+
+setup(jQuery)
+

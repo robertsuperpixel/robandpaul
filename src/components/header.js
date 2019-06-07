@@ -1,8 +1,12 @@
-//import { Link } from "gatsby"
+import { Link } from "gatsby"
 import React from "react"
 
-const Header = () => (
-  <header className="main-header menu-light mobile-header-light mobile-menu-dark">
+const Header = props => (
+  <header
+    className={`main-header menu-${
+      props.lightMenu ? "light" : ""
+    } mobile-header-light mobile-menu-dark`}
+  >
     <div className="header-container">
       <div className="brand-block">
         {/* LOGO */}
@@ -47,9 +51,9 @@ const Header = () => (
               </ul>
             </li>
             <li>
-              <a href="about-1.html" className="ajax-link">
+              <Link to="/page-2" className="ajax-link">
                 About
-              </a>
+              </Link>
             </li>
             <li className="dropdown">
               <a href="#" className="dropdown-toggle">
