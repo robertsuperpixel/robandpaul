@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Rob & Paul | Digital Design, Web Design, Graphic Design Studio Galway`,
+    description: `We do many things at Rob &amp; Paul: design beautifully engaging responsive websites, create stunning brand identities &amp; deliver high quality print materials.`,
+    author: `Rob&amp;Paul`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
