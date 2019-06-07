@@ -10,7 +10,7 @@ const Service = props => {
       >
         <div>
           <div className={styles.description} />
-          <i className={styles.icon} />
+          <i className="ion-ios-speedometer-outline" />
         </div>
       </div>
       <h3 className="h4 mb-2 translate-text translate-up">
