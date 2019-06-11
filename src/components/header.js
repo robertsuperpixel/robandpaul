@@ -4,7 +4,7 @@ import React from "react"
 const Header = props => (
   <header
     className={`main-header menu-${
-      props.lightMenu ? "light" : ""
+      props.lightMenu ? "light" : "dark"
     } mobile-header-light mobile-menu-dark`}
   >
     <div className="header-container">

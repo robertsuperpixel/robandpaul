@@ -5,7 +5,7 @@ import CallToAction from "../components/call-to-action"
 import Teammember from "../components/team-member"
 
 const AboutPage = () => (
-  <Layout>
+  <Layout lightMenu={false}>
     {/* HERO COMPONENT */}
     <HeroPages
       headerTitle="About"
