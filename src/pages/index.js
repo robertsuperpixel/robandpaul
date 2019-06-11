@@ -2,13 +2,17 @@ import React from "react"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Service from "../components/services"
+import PortfolioNav from "../components/portfolio-filter"
+import PortfolioTile from "../components/portfolio-tile"
 
 const IndexPage = () => (
   <Layout>
+    {/* HERO COMPONENT */}
     <Hero />
 
     {/* PAGE CONTENT */}
     <div id="page-content" className="ed-page-content">
+      {/* WHAT WE DO / SERVICES SECTION */}
       <section className="pt-md-9 pb-md-9">
         <div className="container">
           <div className="row">
@@ -30,52 +34,86 @@ const IndexPage = () => (
             </div>
           </div>
 
-          <div className="row">
-            <div className="col-md-6 col-sm-6">
-              <Service
-                serviceTitle="Responsive Web Design"
-                serviceDescription="Our core strength, we create beautiful and engaging websites for businesses big and small."
+          {/* SERVICES */}
+          <div class="row">
+            <div class="col-lg-4 mb-5 mb-lg-0">
+              <h2 class="h1 mb-5 translate-text translate-up">
+                <span>What we do</span>
+              </h2>
+              <p
+                class="lead mb-5 translate-text translate-up"
+                data-translate-delay="150"
+              >
+                <span>
+                  Donec sollicitudin libero vitae massa placerat tempor. Duis
+                  rutrum nisl eu ipsum varius, nec feugiat tortor vulputate.
+                  Integer pellentesque leo id metus dictum, a tristique tellus
+                  faucibus.
+                </span>
+              </p>
+              <div
+                class="divider divider-alt divider-dark h-fixed-4 mt-0 mb-0 animated"
+                data-animation="fadeInUp"
+                data-animation-delay="150"
               />
             </div>
+            <div class="col-lg-6 col-lg-offset-2">
+              <div class="row">
+                <div className="col-md-6 col-sm-6">
+                  {/* SERVICES COMPONENT */}
+                  <Service
+                    icon="ion-ios-speedometer-outline"
+                    serviceTitle="Responsive Web Design"
+                    serviceDescription="Our core strength, we create beautiful and engaging websites for businesses big and small."
+                  />
+                </div>
 
-            <div className="col-md-6 col-sm-6">
-              <Service
-                serviceTitle="Responsive Web Design"
-                serviceDescription="Our core strength, we create beautiful and engaging websites for businesses big and small."
-              />
-            </div>
+                <div className="col-md-6 col-sm-6">
+                  <Service
+                    icon="ion-ios-speedometer-outline"
+                    serviceTitle="Responsive Web Design"
+                    serviceDescription="Our core strength, we create beautiful and engaging websites for businesses big and small."
+                  />
+                </div>
 
-            <div className="col-md-6 col-sm-6">
-              <Service
-                serviceTitle="Responsive Web Design"
-                serviceDescription="Our core strength, we create beautiful and engaging websites for businesses big and small."
-              />
-            </div>
+                <div className="col-md-6 col-sm-6">
+                  <Service
+                    icon="ion-ios-speedometer-outline"
+                    serviceTitle="Responsive Web Design"
+                    serviceDescription="Our core strength, we create beautiful and engaging websites for businesses big and small."
+                  />
+                </div>
 
-            <div className="col-md-6 col-sm-6">
-              <Service
-                serviceTitle="Responsive Web Design"
-                serviceDescription="Our core strength, we create beautiful and engaging websites for businesses big and small."
-              />
-            </div>
+                <div className="col-md-6 col-sm-6">
+                  <Service
+                    icon="ion-ios-speedometer-outline"
+                    serviceTitle="Responsive Web Design"
+                    serviceDescription="Our core strength, we create beautiful and engaging websites for businesses big and small."
+                  />
+                </div>
 
-            <div className="col-md-6 col-sm-6">
-              <Service
-                serviceTitle="Responsive Web Design"
-                serviceDescription="Our core strength, we create beautiful and engaging websites for businesses big and small."
-              />
-            </div>
+                <div className="col-md-6 col-sm-6">
+                  <Service
+                    icon="ion-ios-speedometer-outline"
+                    serviceTitle="Responsive Web Design"
+                    serviceDescription="Our core strength, we create beautiful and engaging websites for businesses big and small."
+                  />
+                </div>
 
-            <div className="col-md-6 col-sm-6">
-              <Service
-                serviceTitle="Responsive Web Design"
-                serviceDescription="Our core strength, we create beautiful and engaging websites for businesses big and small."
-              />
+                <div className="col-md-6 col-sm-6">
+                  <Service
+                    icon="ion-ios-speedometer-outline"
+                    serviceTitle="Responsive Web Design"
+                    serviceDescription="Our core strength, we create beautiful and engaging websites for businesses big and small."
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* SOLUTIONS SECTION */}
       <section className="pt-md-9 pb-md-9">
         <div className="overlay ml-lg-7 mr-lg-7">
           <div className="overlay-inner bg-light" />
@@ -148,6 +186,7 @@ const IndexPage = () => (
         </div>
       </section>
 
+      {/* PORTFOLIO SECTION */}
       <section className="pt-md-9 pb-md-9">
         <div className="container">
           <div className="row">
@@ -166,41 +205,15 @@ const IndexPage = () => (
                   faucibus.
                 </span>
               </p>
-              <nav
-                className="portfolio-filter masonry-filter mb-5 animated"
-                data-animation="fadeInUp"
-                data-animation-delay="150"
-              >
-                <ul>
-                  <li>
-                    <a href="#" className="active" data-filter="*">
-                      All
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" data-filter=".web">
-                      Web
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" data-filter=".brand">
-                      Brand
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" data-filter=".design">
-                      Design
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+              {/* PORTFOLIO NAV */}
+              <PortfolioNav />
             </div>
           </div>
         </div>
         <div className="container-fluid">
           <div className="masonry-wrapper masonry-style-2">
             <div className="masonry-container" data-column-width=".col-md-4">
-              <div className="masonry-item col-md-8 col-sm-6 col-xs-12 web">
+              {/* <div className="masonry-item col-md-8 col-sm-6 col-xs-12 web">
                 <div className="portfolio-item item-h-4 hover-zoom">
                   <a href="portfolio-single-1.html" className="ajax-link">
                     <div className="item-image bg-image-holder">
@@ -216,135 +229,70 @@ const IndexPage = () => (
                     </div>
                   </a>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="masonry-item col-md-4 col-sm-6 col-xs-12 web">
-                <div className="portfolio-item item-h-4 hover-zoom">
-                  <a href="portfolio-single-2.html" className="ajax-link">
-                    <div className="item-image bg-image-holder">
-                      <img
-                        src="demo/images/portfolio/project-1-min.jpg"
-                        alt="background"
-                      />
-                    </div>
-                    <div className="item-overlay overlay-alt" />
-                    <div className="item-details details-inside">
-                      <h4 className="item-title text-white">Love</h4>
-                      <p className="item-cat">Web Design</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
+              <PortfolioTile
+                columns="masonry-item col-md-8 col-sm-6 col-xs-12 web"
+                portLink="page-2"
+                portImg="/images/hero-001.jpg"
+                portAlt="A nice background"
+                portTitle="A nice item"
+                portCat="Print"
+              />
 
-              <div className="masonry-item col-md-4 col-sm-6 col-xs-12 brand">
-                <div className="portfolio-item item-h-4 hover-zoom">
-                  <a href="portfolio-single-1.html" className="ajax-link">
-                    <div className="item-image bg-image-holder">
-                      <img
-                        src="demo/images/portfolio/project-2-min.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="item-overlay overlay-alt" />
-                    <div className="item-details details-inside">
-                      <h4 className="item-title text-white">Beautiful Girl</h4>
-                      <p className="item-cat">Brand</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
+              <PortfolioTile
+                columns="masonry-item col-md-4 col-sm-6 col-xs-12 print"
+                portLink="page-2"
+                portImg="/images/hero-001.jpg"
+                portAlt="Lovely"
+                portTitle="A nice print"
+                portCat="Print"
+              />
 
-              <div className="masonry-item col-md-8 col-sm-6 col-xs-12 web">
-                <div className="portfolio-item item-h-4 hover-zoom">
-                  <a href="portfolio-single-2.html" className="ajax-link">
-                    <div className="item-image bg-image-holder">
-                      <img
-                        src="demo/images/portfolio/project-3-min.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="item-overlay overlay-alt" />
-                    <div className="item-details details-inside">
-                      <h4 className="item-title text-white">Future City</h4>
-                      <p className="item-cat">Web Design</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
+              <PortfolioTile
+                columns="masonry-item col-md-4 col-sm-6 col-xs-12 web"
+                portLink="page-2"
+                portImg="/images/hero-001.jpg"
+                portAlt="Lovely"
+                portTitle="Another nice item"
+                portCat="Web"
+              />
 
-              <div className="masonry-item col-md-8 col-sm-6 col-xs-12 design">
-                <div className="portfolio-item item-h-4 hover-zoom">
-                  <a href="portfolio-single-1.html" className="ajax-link">
-                    <div className="item-image bg-image-holder">
-                      <img
-                        src="demo/images/portfolio/project-4-min.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="item-overlay overlay-alt" />
-                    <div className="item-details details-inside">
-                      <h4 className="item-title text-white">
-                        Golden Gate Bridge
-                      </h4>
-                      <p className="item-cat">Design</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
+              <PortfolioTile
+                columns="masonry-item col-md-8 col-sm-6 col-xs-12 brand"
+                portLink="page-2"
+                portImg="/images/hero-001.jpg"
+                portAlt="Lovely"
+                portTitle="Another nice item 2"
+                portCat="Brand"
+              />
 
-              <div className="masonry-item col-md-4 col-sm-6 col-xs-12 web">
-                <div className="portfolio-item item-h-4 hover-zoom">
-                  <a href="portfolio-single-1.html" className="ajax-link">
-                    <div className="item-image bg-image-holder">
-                      <img
-                        src="demo/images/portfolio/project-9-min.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="item-overlay overlay-alt" />
-                    <div className="item-details details-inside">
-                      <h4 className="item-title text-white">Beach</h4>
-                      <p className="item-cat">Web Design</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
+              <PortfolioTile
+                columns="masonry-item col-md-4 col-sm-6 col-xs-12 web"
+                portLink="page-2"
+                portImg="/images/hero-001.jpg"
+                portAlt="Lovely"
+                portTitle="Another nice item"
+                portCat="Web"
+              />
 
-              <div className="masonry-item col-md-4 col-sm-6 col-xs-12 web">
-                <div className="portfolio-item item-h-4 hover-zoom">
-                  <a href="portfolio-single-2.html" className="ajax-link">
-                    <div className="item-image bg-image-holder">
-                      <img
-                        src="demo/images/portfolio/project-10-min.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="item-overlay overlay-alt" />
-                    <div className="item-details details-inside">
-                      <h4 className="item-title text-white">Adventure</h4>
-                      <p className="item-cat">Web Design</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
+              <PortfolioTile
+                columns="masonry-item col-md-4 col-sm-6 col-xs-12 web"
+                portLink="page-2"
+                portImg="/images/hero-001.jpg"
+                portAlt="Lovely"
+                portTitle="Another nice item"
+                portCat="Web"
+              />
 
-              <div className="masonry-item col-md-8 col-sm-6 col-xs-12 web">
-                <div className="portfolio-item item-h-4 hover-zoom">
-                  <a href="portfolio-single-2.html" className="ajax-link">
-                    <div className="item-image bg-image-holder">
-                      <img
-                        src="demo/images/portfolio/project-11-min.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="item-overlay overlay-alt" />
-                    <div className="item-details details-inside">
-                      <h4 className="item-title text-white">Waterfall</h4>
-                      <p className="item-cat">Web Design</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
+              <PortfolioTile
+                columns="masonry-item col-md-4 col-sm-6 col-xs-12 web"
+                portLink="page-2"
+                portImg="/images/hero-001.jpg"
+                portAlt="Lovely"
+                portTitle="Another nice item"
+                portCat="Web"
+              />
             </div>
             {/* .masonry-container end */}
           </div>

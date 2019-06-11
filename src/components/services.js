@@ -1,22 +1,25 @@
 import React from "react"
-import styles from "../styles/ionicons.min"
 
 const Service = props => {
   return (
-    <div className="feature-block mb-5">
+    <div class="feature-block mb-5 mb-sm-0">
       <div
         className="feature-block-icon mb-4 text-primary animated"
         data-animation="fadeInUp"
+        data-animation-delay="600"
       >
         <div>
-          <div className={styles.description} />
-          <i className="ion-ios-speedometer-outline" />
+          <i className={`${props.icon}`} />
         </div>
       </div>
       <h3 className="h4 mb-2 translate-text translate-up">
         <span>{props.serviceTitle}</span>
       </h3>
-      <p className="translate-text translate-up" data-translate-delay="150">
+      <p
+        className="animated"
+        data-animation="fadeInUp"
+        data-animation-delay="600"
+      >
         <span>{props.serviceDescription}</span>
       </p>
     </div>

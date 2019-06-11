@@ -10,7 +10,7 @@ const Header = props => (
     <div className="header-container">
       <div className="brand-block">
         {/* LOGO */}
-        <a className="logo-block ajax-link" href="index.html">
+        <a className="logo-block ajax-link" href="/">
           <img
             className="logo-light logo"
             src="images/robandpaul-logo.svg"
