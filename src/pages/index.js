@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import Hero from "../components/hero"
+import Hero from "../components/hero-home"
 import Service from "../components/services"
 import PortfolioNav from "../components/portfolio-filter"
 import PortfolioTile from "../components/portfolio-tile"
@@ -213,24 +213,6 @@ const IndexPage = () => (
         <div className="container-fluid">
           <div className="masonry-wrapper masonry-style-2">
             <div className="masonry-container" data-column-width=".col-md-4">
-              {/* <div className="masonry-item col-md-8 col-sm-6 col-xs-12 web">
-                <div className="portfolio-item item-h-4 hover-zoom">
-                  <a href="portfolio-single-1.html" className="ajax-link">
-                    <div className="item-image bg-image-holder">
-                      <img
-                        src="demo/images/portfolio/project-6-min.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="item-overlay overlay-alt" />
-                    <div className="item-details details-inside">
-                      <h4 className="item-title text-white">Mountains</h4>
-                      <p className="item-cat">Web Design</p>
-                    </div>
-                  </a>
-                </div>
-              </div> */}
-
               <PortfolioTile
                 columns="masonry-item col-md-8 col-sm-6 col-xs-12 web"
                 portLink="page-2"

@@ -2,6 +2,7 @@ import React from "react"
 
 const Hero = () => (
   <div id="page-hero" className="ed-page-hero">
+    {/* HOME PAGE HERO */}
     <section className="fullscreen-element pt-13 pt-md-10 pb-13 pb-md-10">
       <div className="overlay">
         <div className="hero-addon-b bg-light- bg-dark" />
